@@ -1,14 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'node'
+    }
+
+  }
   stages {
     stage('') {
       steps {
-        retry(count: 1) {
-          node(label: '1')
-        }
-
+        sh 'ls'
       }
     }
 
+  }
+  environment {
+    node1 = '1'
   }
 }
