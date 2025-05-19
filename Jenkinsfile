@@ -9,6 +9,7 @@ pipeline {
     stage('') {
       steps {
         sh 'ls'
+        sh 'echo "ali ali"'
       }
     }
 
